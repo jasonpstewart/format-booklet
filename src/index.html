@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Booklet Formatter</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>PDF Booklet Formatter</h1>
+            <p>Upload a PDF to reorder pages for bifold booklet printing (2 pages per sheet, double-sided, short edge binding)</p>
+        </header>
+
+        <main>
+            <div class="upload-section">
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-icon">📄</div>
+                    <p>Click to select PDF file or drag and drop</p>
+                    <input type="file" id="fileInput" accept=".pdf" hidden>
+                </div>
+            </div>
+
+            <div class="processing-section" id="processingSection" style="display: none;">
+                <div class="spinner"></div>
+                <p>Processing PDF...</p>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>Booklet Ready!</h2>
+                <div class="page-order" id="pageOrder"></div>
+                <button id="downloadBtn" class="download-btn">Download Reordered PDF</button>
+                <button id="resetBtn" class="reset-btn">Upload Another PDF</button>
+            </div>
+
+            <div class="instructions">
+                <h3>Printing Instructions</h3>
+                <ol>
+                    <li>Download the reordered PDF</li>
+                    <li>Print using these settings:
+                        <ul>
+                            <li><strong>Pages per sheet:</strong> 2</li>
+                            <li><strong>Double-sided:</strong> Yes</li>
+                            <li><strong>Binding:</strong> Short edge (flip on short edge)</li>
+                        </ul>
+                    </li>
+                    <li>Fold the printed sheets in half to create your booklet</li>
+                </ol>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
