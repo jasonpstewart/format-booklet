@@ -35,6 +35,19 @@ header p {
     opacity: 0.9;
 }
 
+.about-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    text-decoration: none;
+    margin-top: 8px;
+    display: inline-block;
+}
+
+.about-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
 main {
     background: white;
     border-radius: 15px;

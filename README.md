@@ -2,15 +2,17 @@
 
 A single-page web application that reorders PDF pages for bifold booklet printing. Upload a PDF and get a reordered version optimized for printing as a booklet with 2 pages per sheet, double-sided, short edge binding.
 
+**Live at: https://jasonpstewart.github.io/format-booklet/**
+
 ## Features
 
-- 🎯 **Pure Client-Side**: Runs 100% in the browser - no server required
-- 📄 **PDF Processing**: Uses PDF-lib for client-side PDF manipulation
-- 📱 **Responsive Design**: Works on desktop and mobile devices
-- 🖨️ **Optimized for Printing**: Implements the correct page ordering algorithm for booklet printing
-- 🎨 **Modern UI**: Clean, intuitive interface with drag-and-drop support
-- 🔷 **TypeScript**: Written in TypeScript for better type safety and development experience
-- 📦 **Bundled**: Uses Webpack for optimized production builds
+- **Pure Client-Side**: Runs 100% in the browser - no server required
+- **PDF Processing**: Uses PDF-lib for client-side PDF manipulation
+- **Responsive Design**: Works on desktop and mobile devices
+- **Optimized for Printing**: Implements the correct page ordering algorithm for booklet printing
+- **Modern UI**: Clean, intuitive interface with drag-and-drop support
+- **TypeScript**: Written in TypeScript for better type safety and development experience
+- **Bundled**: Uses Webpack for optimized production builds
 
 ## How It Works
 
@@ -61,15 +63,17 @@ The algorithm automatically pads to multiples of 4 pages (required for booklet p
 ```
 format-booklet/
 ├── src/
-│   ├── main.ts             # Main TypeScript application logic
-│   ├── styles.css          # CSS styling
-│   └── index.html          # HTML template
-├── dist/                   # Built files (created after npm run build)
-├── webpack.config.js       # Webpack configuration
-├── tsconfig.json          # TypeScript configuration
-├── package.json           # NPM package configuration
-├── .gitignore             # Git ignore rules
-└── README.md              # This file
+│   ├── main.ts                # Main TypeScript application logic
+│   ├── booklet-algorithm.ts   # Page reordering algorithm (separated for testability)
+│   ├── test.ts                # Booklet algorithm tests
+│   ├── styles.css             # CSS styling
+│   └── index.html             # HTML template
+├── dist/                      # Built files (created after npm run build)
+├── webpack.config.js          # Webpack configuration
+├── tsconfig.json              # TypeScript configuration
+├── package.json               # NPM package configuration
+├── .gitignore                 # Git ignore rules
+└── README.md                  # This file
 ```
 
 ## Scripts
@@ -77,6 +81,7 @@ format-booklet/
 - `npm start` - Start development server with hot reloading
 - `npm run build` - Build for production (outputs to `dist/`)
 - `npm run dev` - Build in development mode with watch
+- `npm test` - Run booklet algorithm tests
 - `npm run serve` - Serve the built files from `dist/`
 - `npm run clean` - Remove the `dist/` directory
 
@@ -95,28 +100,6 @@ format-booklet/
 - Firefox 75+
 - Safari 13+
 - Edge 80+
-
-## Development
-
-The project uses TypeScript and Webpack for development and building:
-
-### Development Server
-```bash
-npm start
-```
-Starts a development server with hot module replacement.
-
-### Building
-```bash
-npm run build
-```
-Creates an optimized production build in the `dist/` folder.
-
-### File Structure
-- Source files are in `src/`
-- Built files go to `dist/`
-- The main entry point is `src/main.ts`
-- Styles are imported in TypeScript using `import './styles.css'`
 
 ## Algorithm Details
 
