@@ -110,40 +110,6 @@ The page ordering algorithm works by:
 3. Each sheet contains 4 pages: 2 front pages and 2 back pages
 4. Pages are arranged so that when printed double-sided and folded, they appear in the correct order
 
-## Deployment
-
-### **GitHub Pages (Automatic)**
-
-This project is set up for automatic deployment to GitHub Pages:
-
-1. **Push to main branch** - Any push to the `main` branch triggers automatic build and deployment
-2. **Access your site** - Once deployed, visit: `https://jasonpstewart.github.io/format-booklet`
-3. **Monitor builds** - Check the "Actions" tab in your GitHub repository to see build status
-
-### **GitHub Pages Setup (One-time)**
-
-To enable GitHub Pages for your repository:
-
-1. Go to your repository settings on GitHub
-2. Navigate to **Pages** in the left sidebar
-3. Under **Source**, select **GitHub Actions**
-4. The workflow will automatically deploy on the next push to `main`
-
-### **Manual Deployment**
-
-For other static hosting services, build locally and deploy the `dist/` folder:
-
-```bash
-npm run build
-# Upload the contents of dist/ folder to your hosting service
-```
-
-**Other hosting options:**
-- **Netlify**: Connect repository with build command `npm run build` and publish directory `dist`
-- **Vercel**: Connect repository for automatic deployments
-- **Firebase Hosting**: Use Firebase CLI to deploy `dist/` folder
-- **AWS S3**: Upload `dist/` contents and configure for static website hosting
-
 ## Type Safety
 
 The project is written in TypeScript with strict type checking enabled. Key interfaces:
